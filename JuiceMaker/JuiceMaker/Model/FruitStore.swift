@@ -19,9 +19,10 @@ class FruitStore: FruitStorable {
                                .mango: 10,
                                .kiwi: 10]
   
-  init(qauntity: Int) {
+  init(quantity: Int) {
+    let quantity = max(0, quantity)
     Fruit.allCases.forEach {
-      store[$0] = qauntity
+      store[$0] = quantity
     }
   }
   

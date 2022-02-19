@@ -16,7 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     guard let windowScene = (scene as? UIWindowScene) else { return }
     
     let navigationController = UINavigationController()
-    let fruitStore = FruitStore(qauntity: 10)
+    let fruitStore = FruitStore(quantity: 10)
     let juiceMaker = JuiceMaker(fruitStore: fruitStore)
     coordinator = MainCoordinator(navigationController: navigationController, juiceMaker: juiceMaker, fruitStore: fruitStore)
     coordinator?.start()
